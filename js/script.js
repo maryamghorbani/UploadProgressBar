@@ -13,12 +13,15 @@ form.addEventListener('submit', function (event) {
         let formdata = new FormData();
         formdata.append('file', file);
 
-        let ajax = new XMLHttpRequest();
-        ajax.upload.addEventListener('progress' , progressHandler)
-        ajax.addEventListener('load', completeHandler)
 
-        ajax.open('POST', './upload.php');
-        ajax.send(formdata)
+        axios.post('./upload.php' , formdata , {
+            onUploadProgress: progressHandler
+        })
+            .then(response => {
+                console.log(response)
+            })
+            .catch(error => console.log(error))
+
     }
 })
 
@@ -29,7 +32,3 @@ function progressHandler(event) {
     progressBar.innerHTML = `${percent}%`
 }
 
-
-function completeHandler() {
-    console.log('complete')
-}
