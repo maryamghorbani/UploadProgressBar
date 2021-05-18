@@ -15,20 +15,20 @@
 <body>
 
     <div class="container">
-        <div class="row">
-            <div class="col">
-                <form action="/upload.php" method="POST" enctype="multipart/form-data">
-                    <div class="form-group">
-                        <label for="fileupload"> File: </label>
-                        <input type="file" id="fileupload" name="file" class="form-control-file">
-                    </div>
-                    <button class="btn btn-danger">submit</button>
-                </form
-            </div>
-        </div>
+         <div class="row">
+               <div class="col">
+                    <form action="/upload.php" method="POST" enctype="multipart/form-data" id="upload">
+                        <div class="form-group">
+                            <label for="fileupload">File : </label>
+                            <input type="file" id="fileupload" name="file" class="form-control-file">
+                        </div>
+                        <button class="btn btn-danger">submit</button>
+                    </form>
+               </div>
+         </div>
     </div>
     
-    <script src="js/slider.js"></script>
+
     <script src="js/script.js"></script>
 </body>
 </html>
