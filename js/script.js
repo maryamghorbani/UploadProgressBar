@@ -24,7 +24,9 @@ form.addEventListener('submit', function (event) {
 
 
 function progressHandler(event) {
-    
+    let percent = Math.round((event.loaded / event.total) * 100)
+    progressBar.style.width = `${percent}%`
+    progressBar.innerHTML = `${percent}%`
 }
 
 
