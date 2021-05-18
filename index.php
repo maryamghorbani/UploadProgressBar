@@ -24,7 +24,7 @@
                         </div>
                         <button class="btn btn-danger mt-4">submit</button>
                     </form>
-                    <div class="mt-4 d-none">
+                    <div class="mt-4 d-none" id="progress">
                         <div class="progress">
                              <div class="progress-bar" style="width: 0%">0%</div>
                         </div>
