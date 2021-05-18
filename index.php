@@ -17,13 +17,18 @@
     <div class="container">
          <div class="row">
                <div class="col">
-                    <form action="/upload.php" method="POST" enctype="multipart/form-data" id="upload">
+                    <form action="/upload.php" method="POST" enctype="multipart/form-data" id="upload" class="mt-4">
                         <div class="form-group">
                             <label for="fileupload">File : </label>
                             <input type="file" id="fileupload" name="file" class="form-control-file">
                         </div>
-                        <button class="btn btn-danger">submit</button>
+                        <button class="btn btn-danger mt-4">submit</button>
                     </form>
+                    <div class="mt-4 d-none">
+                        <div class="progress">
+                             <div class="progress-bar" style="width: 0%">0%</div>
+                        </div>
+                    </div>
                </div>
          </div>
     </div>
